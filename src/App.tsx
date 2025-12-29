@@ -116,6 +116,15 @@ const App = () => {
               Conectar
             </a>
           </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1 }}
+            style={{ marginTop: '3rem', fontSize: '0.9rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}
+          >
+            <span style={{ width: '8px', height: '8px', background: '#10b981', borderRadius: '50%', display: 'inline-block', boxShadow: '0 0 10px #10b981' }}></span>
+            <span style={{ color: 'var(--text-secondary)' }}>Disponible para nuevos desafíos en Web3</span>
+          </motion.div>
         </motion.div>
       </section>
 
@@ -182,6 +191,19 @@ const App = () => {
             </motion.div>
           ))}
         </motion.div>
+      </section>
+
+      <section id="tech" className="container">
+        <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+          <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Stack <span className="gradient-text">Tecnológico</span></h2>
+        </div>
+        <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+          {['React', 'TypeScript', 'Ethers.js', 'Solidity', 'Vite', 'Node.js', 'Git'].map((skill) => (
+            <span key={skill} className="glass-card" style={{ padding: '0.5rem 1.5rem', borderRadius: '100px', fontSize: '0.9rem', fontWeight: 500 }}>
+              {skill}
+            </span>
+          ))}
+        </div>
       </section>
 
       <section id="connect" className="container" style={{ textAlign: 'center' }}>
